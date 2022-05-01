@@ -126,7 +126,10 @@ animals = [camel, lion, deer, goose, bat, rabbit]
 while True:
     value = input("Please enter the number of the habitat you would like to view:")
     if value != 'exit':
-        print(animals[int(value)])
+        if int(value) < 6:
+            print(animals[int(value)])
+        else:
+            print('Incorrect value. Input should be < 6')
     else:
         print('See you later!')
         break
